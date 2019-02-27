@@ -8,7 +8,6 @@ wss.on('connection', function connection(ws) {
     });
 
     console.log("CONNECTION");
-    ws.send('something');
 });
 
 wss.broadcast = function broadcast(data) {
@@ -21,7 +20,7 @@ wss.broadcast = function broadcast(data) {
 
 //
 
-const socket = require('socket.io-client')('ws://twitchheat.herokuapp.com');
+const socket = require('socket.io-client')('ws://heat-ebs.j38.net');
 //const socket = require('socket.io-client')('ws://localhost:3000/');
 socket.on('connect', function () {
     console.log("CONNECTED");
